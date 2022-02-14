@@ -3,6 +3,10 @@
 Lista de tareas sencilla utilizando
 JavaScript puro. 
 
+Puedes acceder a la App desde el siguiente enlace
+de github pages:
+https://eifhen.github.io/AppListaDeTareas/
+
 ### Notas:
 Recuerda reconstruir los modulos de Node
 
