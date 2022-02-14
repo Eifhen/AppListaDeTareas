@@ -1,6 +1,7 @@
-# Webpack Starter
+# App ToDo List o App Lista de Tareas
 
-Este es el proyecto inicial para crear aplicaciones utilizando webpack.
+Lista de tareas sencilla utilizando
+JavaScript puro. 
 
 ### Notas:
 Recuerda reconstruir los modulos de Node
