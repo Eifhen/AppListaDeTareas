@@ -86,7 +86,7 @@ btnEliminarCompletados.addEventListener('click', () => {
 
 ul_filtros.addEventListener('click', (event) => {
 
-    const filtro = event.target.text.trim();
+    const filtro = event.target.text
     if( !filtro ) { return; }
 
     anchorFiltros.forEach( elem => elem.classList.remove('selected') );
@@ -95,7 +95,7 @@ ul_filtros.addEventListener('click', (event) => {
     {
         elemento.classList.remove('hidden');
         const completado = elemento.classList.contains("completed");
-        switch( filtro ) {
+        switch( filtro.trim() ) {
 
             case 'Pendientes':
                 if(completado){
