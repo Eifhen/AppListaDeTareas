@@ -123,4 +123,4 @@ marcarTodos.addEventListener('click', ()=>{
         const checkbox = checkboxList[i];
         checkbox.checked = (checkbox.checked) ? false : true;
     }
-})
+});
