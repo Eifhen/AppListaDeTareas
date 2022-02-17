@@ -54,6 +54,13 @@ export class ToDoList {
         
     }
 
+    marcarTodosComoCompletados(){
+        for( const tarea of this.tareas ) {
+            tarea.completado = !tarea.completado;
+            this.guardarLocalStorage();
+            this.totalTareasPendientes();
+        }
+    }
     eliminarCompletados () {
         // retorna un nuevo arreglo con las tareas que NO estan completadas
         // al hacer esto se borran las tarea que SI estan completadas.

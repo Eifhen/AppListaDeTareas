@@ -7,6 +7,8 @@ const inputNuevaTarea = document.querySelector(".new-todo");
 const btnEliminarCompletados = document.querySelector(".clear-completed");
 const ul_filtros = document.querySelector(".filters");
 const anchorFiltros = document.querySelectorAll(".filtro");
+const marcarTodos = document.querySelector("#toggle-all");
+
 
 // crear tarea component
 export const crearTareaHtml = ( tarea ) => {
@@ -14,11 +16,11 @@ export const crearTareaHtml = ( tarea ) => {
     const htmlTarea = `
     <li class="${ (tarea.completado) ? 'completed' : ''  }" data-id="${ tarea.id }">
 		<div class="view">
-			<input class="toggle" type="checkbox" ${ (tarea.completado) ? 'checked' : ''}>
+			<input class="toggle cbx" type="checkbox" ${ (tarea.completado) ? 'checked' : ''}>
 			<label>${ tarea.tarea }</label>
 			<button class="destroy"></button>
 		</div>
-		<input class="edit" value="Create a TodoMVC template">
+		<input class="edit" value="edit">
 	</li> `;
 
     const div = document.createElement("div");
@@ -59,7 +61,7 @@ divToDoList.addEventListener('click', ( event ) => {
         // marcamos como 'completado' o no, la tarea seleccionada
         // si la tarea esta completada agregamos la clase 'completed'
         // si la tarea no esta completada se remueve la clase 'completed'
-        // el la propiedad 'toggle' nos permite hacer esto.
+        // la propiedad 'toggle' nos permite hacer esto.
         listaTareas.marcarCompletado( id_tarea );
         elementoTarea.classList.toggle('completed');
 
@@ -111,3 +113,14 @@ ul_filtros.addEventListener('click', (event) => {
         }
     }
 });
+
+marcarTodos.addEventListener('click', ()=>{
+    const checkboxList = document.querySelectorAll(".cbx");
+    listaTareas.marcarTodosComoCompletados();
+    for(let i = divToDoList.children.length - 1; i >= 0; i--){
+        const elemento = divToDoList.children[i];
+        elemento.classList.toggle('completed');
+        const checkbox = checkboxList[i];
+        checkbox.checked = (checkbox.checked) ? false : true;
+    }
+})

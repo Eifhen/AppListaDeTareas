@@ -23,7 +23,8 @@ button {
 body {
 	font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	line-height: 1.4em;
-	background: #f5f5f5;
+	/* background: #f5f5f5; */
+	background-color:#df1c44;
 	color: #111111;
 	min-width: 230px;
 	max-width: 550px;
@@ -43,10 +44,12 @@ body {
 
 .todoapp {
 	background: #fff;
-	margin: 130px 0 40px 0;
+	margin: 170px 0 40px 0;
 	position: relative;
-	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
-	            0 25px 50px 0 rgba(0, 0, 0, 0.1);
+	border-radius: 15px !important;
+	/* box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+	            0 25px 50px 0 rgba(0, 0, 0, 0.1); */
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 .todoapp input::-webkit-input-placeholder {
@@ -67,14 +70,16 @@ body {
 	color: rgba(0, 0, 0, 0.4);
 }
 
-.todoapp h3 {
+.todoapp h4 {
 	position: absolute;
-	top: -120px;
+	top: -70px;
 	width: 100%;
-	font-size: 60px;
-	font-weight: 200;
-	text-align: center;
-	color: #b83f45;
+	font-size: 30px;
+	font-weight: 150;
+	margin-left:5px;
+	text-align: left;
+	/* color: #b83f45; */
+	color:#fecf6a;
 	-webkit-text-rendering: optimizeLegibility;
 	-moz-text-rendering: optimizeLegibility;
 	text-rendering: optimizeLegibility;
@@ -85,7 +90,7 @@ body {
 	position: relative;
 	margin: 0;
 	width: 100%;
-	font-size: 24px;
+	font-size: 18px;
 	font-family: inherit;
 	font-weight: inherit;
 	line-height: 1.4em;
@@ -119,14 +124,16 @@ body {
 	position: absolute;
 	right: 100%;
 	bottom: 100%;
+	
 }
 
 .toggle-all + label {
+	
 	width: 60px;
 	height: 34px;
 	font-size: 0;
 	position: absolute;
-	top: -52px;
+	top: -49px;
 	left: -13px;
 	-webkit-transform: rotate(90deg);
 	transform: rotate(90deg);
@@ -265,7 +272,7 @@ body {
 	border-top: 1px solid #e6e6e6;
 }
 
-.footer:before {
+/* .footer:before {
 	content: '';
 	position: absolute;
 	right: 0;
@@ -278,7 +285,7 @@ body {
 	            0 9px 1px -3px rgba(0, 0, 0, 0.2),
 	            0 16px 0 -6px #f6f6f6,
 	            0 17px 2px -6px rgba(0, 0, 0, 0.2);
-}
+} */
 
 .todo-count {
 	float: left;
@@ -316,7 +323,9 @@ body {
 }
 
 .filters li a.selected {
-	border-color: rgba(175, 47, 47, 0.2);
+	/* border-color: rgba(175, 47, 47, 0.2); */
+	color:white;
+	background-color:#fecf6a;
 }
 
 .clear-completed,
